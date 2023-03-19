@@ -4,7 +4,7 @@ import nostalgy from './nostalgy/scene.glb'
 import './App.css'
 import { PresentationControls, Stage } from '@react-three/drei';
 import { Canvas, applyProps, useFrame } from '@react-three/fiber'
-import { PerformanceMonitor, AccumulativeShadows, RandomizedLight, Environment, Lightformer, Float, useGLTF } from '@react-three/drei'
+import { PerformanceMonitor, AccumulativeShadows, RandomizedLight, Environment, Lightformer, Float, useGLTF,OrbitControls } from '@react-three/drei'
 import './App.css'
 
 
@@ -20,9 +20,11 @@ function Model(props){
 
 
 export default function  MyModel(){
+
+
   return (
     <div style={{width:"400px" , height: "400px",borderRadius: '50%'}}>
-    <Canvas shadowMap={null} dpr={[1,2]} camera={{fov: 30}} position={[5, 0, 15]} style={{width:"400px" , height: "400px",borderRadius: '50%'}}
+    <Canvas  shadowMap={null} dpr={[1,2]} camera={{fov: 30}} position={[5, 0, 15]} style={{width:"400px" , height: "400px",borderRadius: '50%'}}
     >
             <spotLight position={[0, 15, 0]} angle={0.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001} />
 
@@ -36,6 +38,7 @@ export default function  MyModel(){
                 <Model scale={0.1} />
           </Stage>
         </PresentationControls>
+        <OrbitControls  autoRotate autoRotateSpeed={12.0} enableRotate={false} />
     </Canvas>
     </div>
   )
