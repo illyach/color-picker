@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/color-picker/static/css/main.ebf5a2cf.css",
+    "main.js": "/color-picker/static/js/main.f1ca50d5.js",
+    "index.html": "/color-picker/index.html",
+    "main.ebf5a2cf.css.map": "/color-picker/static/css/main.ebf5a2cf.css.map",
+    "main.f1ca50d5.js.map": "/color-picker/static/js/main.f1ca50d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebf5a2cf.css",
+    "static/js/main.f1ca50d5.js"
+  ]
+}
