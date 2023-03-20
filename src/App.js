@@ -1,24 +1,33 @@
-import React, { useRef, useEffect, Suspense,useLayoutEffect, useState } from 'react';
-import * as THREE from 'three';
-import nostalgy from './nostalgy/scene.glb'
+import React, { useState } from 'react';
 import './App.css'
-import { PresentationControls, Stage } from '@react-three/drei';
-import { Canvas, applyProps, useFrame } from '@react-three/fiber'
-import { PerformanceMonitor, AccumulativeShadows, RandomizedLight, Environment, Lightformer, Float, useGLTF } from '@react-three/drei'
+
+
+
 import MyModel from './MyModel';
 
 function App() {
+    const [color, setColor] = useState("")
+    const [colorLine, setColorLine] = useState("")
 
-
+    const colors = ['#ccc', '#EFBD4E', '#80C670', '#726DE8', '#EF674E', '#353934']
   return (
     <>
-    <div className="text">
-    <p>Welcome to my website</p>
+    <div className='pick-line'>
+      <h3>Pick your line</h3>
+    {colors.map((color) => (
+        <div className="circle-line" key={color} style={{background: color}}  onClick={() => setColorLine(color)}/>
+      ))}
+    </div>
+
+    <div className="color-options">
+      {colors.map((color) => (
+        <div className="circle" key={color} style={{background: color}}  onClick={() => setColor(color)}/>
+      ))}
     </div>
 
     
     <div className="model">
-    <MyModel/>
+    <MyModel color={color} colorLine={colorLine}/>
     </div>
 
     </>

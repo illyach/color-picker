@@ -12,31 +12,60 @@ body,
 }
 
 body {
-  background: #ababcf;
+  background: #e4e2e2;
 }
 
 .model{
   width: 400px;
   height: 400px;
   position: relative;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   box-shadow: 4px 4px 4px rgb(137, 61, 242);
 
-  top: 40%;
-  left: 50%;
+  top: 30%;
+  left: 44%;
 
   transform: translate(-50%, -50%);
-  border-radius: 50%;
+  /* border-radius: 50%; */
   
 }
 
-.text{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-  font-weight: bold;
-  color:rgb(42, 7, 74);
+
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.6s;
+    padding:30px;
+    margin: 10px;
 }
 
+.circle:hover{
+  transform: scale(1.18);
+  transition: 0.3s;
+}
+
+.color-options{
+  display: flex;
+  justify-content: center;
+}
+
+.circle-line{
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.6s;
+  padding:10px;
+  margin: 10px;
+}
+
+
+.pick-line{
+  position: relative;
+  top:70%;
+  right: -20%;
+}
